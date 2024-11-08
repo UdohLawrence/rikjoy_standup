@@ -1,9 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./resources/**/*.{edge,html,ts,js,tsx,jsx,vue}'],
+  content: [
+    './resources/**/*.{edge,html,ts,js,tsx,jsx,vue}',
+    'node_modules/preline/dist/*.js'
+  ],
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('preline/plugin')
+  ],
 }
 
